@@ -133,6 +133,37 @@ describe("Formula parsing and validation", function() {
 
     });
 
+    describe("remove_parentheses(input) ", function() {
+
+        it("should properly grab all text not inside parenthesis", function(){
+            var test1 = "(H2O)2343(H2O)(NaCl)";
+
+            expect(remove_parentheses(test1)).toEqual("2343");
+        });
+
+    });
+
+    describe("segments_to_compound_components(segments)", function() {
+
+        it("should make compound_components properly", function(){
+            var test1 = ["Na2", "H2", "Cl99", "Fe9"];
+
+            var components = segments_to_compound_components(test1);
+
+            expect(components[0].quantity).toEqual(2);
+            expect(components[1].quantity).toEqual(2);
+            expect(components[2].quantity).toEqual(99);
+            expect(components[3].quantity).toEqual(9);
+
+            expect(components[0].element.symbol).toEqual("Na");
+            expect(components[1].element.symbol).toEqual("H");
+            expect(components[2].element.symbol).toEqual("Cl");
+            expect(components[3].element.symbol).toEqual("Fe");
+
+        });
+
+    });
+
 });
 
 describe("compound creation", function(){
@@ -227,6 +258,12 @@ describe("compound creation", function(){
 
             expect(comp1.molecular_weight()).toEqual(192.1232);
 
+
+            var form2 = "NH2CH(C4H5N2)COOH";
+
+            var comp2 = string_to_compound(form2);
+
+            expect(comp2.molecular_weight()).toEqual(155.15);
         });
 
 
@@ -245,31 +282,24 @@ describe("compound creation", function(){
 
         });
 
-    });
+        describe("string_to_compounds(str) testing", function() {
 
-    describe("is_valid_formula_test(str) function testing", function() {
-    
-        it("should accept ionic formulas", function () {
-           // expect(is_valid_formula_test("2(NaCl)2H2O")).toEqual(true);
+            it("should accept ionic formulas", function () {
+                var ionic_compound = "(NaCl)(H2O)4";
+                var compounds = string_to_ionic_compounds(ionic_compound);
+                expect(compounds.length).toEqual(2);
+                expect(compounds[0]).toEqual("(NaCl)");
+                var waterqty = compounds[1];
+                expect(compounds[1]).toEqual("(H2O)4");
+
+                var water_components = split_sub_compound(waterqty);
+                expect(water_components.length).toEqual(4);
+                expect(water_components[1]).toEqual("H2O");
+                expect(water_components[3]).toEqual("4");
+            });
         });
     });
-    
-    describe("string_to_compounds(str) testing", function() {
-    
-        it("should accept ionic formulas", function () {
-            var ionic_compound = "(NaCl)(H2O)4";
-            var compounds = string_to_ionic_compounds(ionic_compound);
-            expect(compounds.length).toEqual(2);
-            expect(compounds[0]).toEqual("(NaCl)");
-            var waterqty = compounds[1];
-            expect(compounds[1]).toEqual("(H2O)4");
 
-            var water_components = split_sub_compound(waterqty);
-            expect(water_components.length).toEqual(4);
-            expect(water_components[1]).toEqual("H2O");
-            expect(water_components[3]).toEqual("4");
-        });
-    });
     describe("add_sub_compounds testing", function() {
 
         var compound = string_to_compound("NaCl");
@@ -301,35 +331,6 @@ describe("compound creation", function(){
     });
 
 
-    describe("remove_parentheses(input) ", function() {
 
-        it("should properly grab all text not inside parenthesis", function(){
-            var test1 = "(H2O)2343(H2O)(NaCl)";
-
-            expect(remove_parentheses(test1)).toEqual("2343");
-        });
-
-    });
-
-    describe("segments_to_compound_components(segments)", function() {
-
-        it("should make compound_components properly", function(){
-            var test1 = ["Na2", "H2", "Cl99", "Fe9"];
-
-            var components = segments_to_compound_components(test1);
-
-            expect(components[0].quantity).toEqual(2);
-            expect(components[1].quantity).toEqual(2);
-            expect(components[2].quantity).toEqual(99);
-            expect(components[3].quantity).toEqual(9);
-
-            expect(components[0].element.symbol).toEqual("Na");
-            expect(components[1].element.symbol).toEqual("H");
-            expect(components[2].element.symbol).toEqual("Cl");
-            expect(components[3].element.symbol).toEqual("Fe");
-
-        });
-
-    });
 
 });

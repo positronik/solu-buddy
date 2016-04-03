@@ -1,17 +1,3 @@
-// $(function(){
-//
-//
-//     /**
-//      * 'Next' button control function. This function is called when the 'Next' button is pressed
-//      */
-//
-//     //Back arrow for answer page
-//     $("#arrowContainer img").click(function(){
-//        $("#answerDiv").slideUp("fast");
-//     });
-//
-// });
-
 function next_check(page){
     try {
 
@@ -46,8 +32,6 @@ function next_check(page){
              *   The answer fields will be filled and the answer page and the answer page will be shown. */
             fill_fields(page);
 
-            /* Shows answer page.*/
-            $("#answerDiv").slideDown("slow");
         }
 
     }catch(ex){
