@@ -33,12 +33,12 @@ describe("Formula parsing and validation", function() {
 
           });
     
-          it("should be able to reject duplicate elements", function () {
-             expect(is_valid_formula("NaHH")).toEqual(false);
-             expect(is_valid_formula("4NaHH")).toEqual(false);
-             expect(is_valid_formula("Na2H4H5")).toEqual(false);
-             expect(is_valid_formula("NaHClH")).toEqual(false);
-             expect(is_valid_formula("NaClNa")).toEqual(false);
+          it("should not reject duplicate elements", function () {
+             expect(is_valid_formula("NaHH")).toEqual(true);
+             expect(is_valid_formula("4NaHH")).toEqual(true);
+             expect(is_valid_formula("Na2H4H5")).toEqual(true);
+             expect(is_valid_formula("NaHClH")).toEqual(true);
+             expect(is_valid_formula("NaClNa")).toEqual(true);
     
           });
     
@@ -226,6 +226,11 @@ describe("compound creation", function(){
             expect(comp1.sub_compounds.length).toEqual(1);
 
             expect(comp1.molecular_weight()).toEqual(192.1232);
+
+            var form2 = "NH2CH(C4H5N2)COOH";
+            var comp2 = string_to_compound(form2);
+
+            expect(comp2.molecular_weight()).toEqual(155.1542);
 
         });
 
