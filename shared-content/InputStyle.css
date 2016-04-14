@@ -13,6 +13,15 @@ html,body{
 	font-size: 15px;
 }
 
+.grey-div{
+    color:white;
+    background: rgba(40,40,40,0.6);
+    border: 1px solid white;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+}
+
 #inputDiv{
     color:white;
     background: rgba(40,40,40,0.6);
@@ -75,7 +84,7 @@ html,body{
 	-ms-transform: translateY(-50%);
 	transform: translateY(-40%);
 	font-size: 18px;
-	margin-top: 2em;
+	margin-top: 3em;
 	padding-bottom:0px;
 	margin-bottom: -2em;
 	
@@ -111,4 +120,122 @@ html,body{
 #content hr{
     color: black;
     width: 80%;
+}
+
+#headerDiv h2 {
+    margin-top: 100px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h3 {
+    text-align: center;
+    font-family: sans-serif;
+    width: 35em;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Answer page style */
+#answerDiv{
+    display: none;
+    margin:15px;
+    color:black;
+    text-align: center;
+    background: rgba(40,40,40,0.6);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 30px;
+}
+.flaskDescription {
+    position: relative;
+    bottom:-35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#arrowContainer{
+    text-align: center;
+}
+
+#arrowContainer img{
+    height: 35px;
+    width: 100px;
+    margin-top: 10px;
+    cursor:pointer;
+}
+
+
+.inline-div{
+	position: relative;
+    display:inline-block;
+    margin: 20px;    
+}
+
+
+#molarity, #molarityValue{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.flaskDescription {
+    position: relative;
+    bottom:-35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.flaskImgAndNumberDiv{
+    height: 217px;   
+}
+
+.flaskImgAndNumberDiv p{
+    margin-top: 0; 
+    position: relative;
+    bottom:2em;
+    font-size: 1.5em;
+}
+
+.blueArrow{
+    position: absolute;
+    right: 0px;
+    top:40%;
+}
+
+.dilutionFlask{
+    position: relative;
+    width:225px;
+}
+#answerButtonsDiv {
+    padding-bottom: 40px;
+}
+#answerButtonsDiv button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#myAlert{
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+}
+
+#largeBeakerImg{
+    width: 180px;
+}
+
+#smallBeakerImg{
+    width: 130px;
+}
+
+#stockSolutionDiv .blueArrow{
+    right: -50px;
+}
+
+#largeBeakerImg{
+    width: 180px;
+}
+
+#smallBeakerImg{
+    width: 130px;
 }
