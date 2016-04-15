@@ -3,7 +3,7 @@
     <h2>Making Calibration Standards by The Standard Addition Model</h2>
 </div>
 
-<div id="divContainer">
+<div class="container">
 	<div class="row">
 		<div class="col-md-4 col-sm-12"><p class="regText">Enter a solvent chemical</p></div>
 		<div class="col-md-4 hidden-sm hidden-xs"><p class="regText">Enter an analyte chemical</p></div>

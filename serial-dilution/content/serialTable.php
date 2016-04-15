@@ -2,7 +2,7 @@
     <h3>Fill in the fields below to set up the dilution series</h3>
 </div>
 
-<div id="divContainer">
+<div class="container">
 	<div class="row">
 		<div class="col-md-4 col-sm-12"><p class="regText">Enter a name for your solvent.</p></div>
 		<div class="col-md-4 hidden-sm hidden-xs"><p class="regText">Enter a name for your solute</p></div>

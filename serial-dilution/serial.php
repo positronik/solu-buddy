@@ -30,14 +30,12 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
 
 <!-- Solution Input page -->
 
-<div id = "content" class="text-center">
+<div id="content" class="text-center">
     <img src="serial.png" width="550"><br><br>
-    <div id="inputDiv" class="grey-div">
-        <div id="divContainer">
+    <div class="grey-div">
             <?php
                 include "content/serialTable.php";
             ?>
-        </div>
         <div id="myAlert" class="alert alert-danger">
             <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
         </div>

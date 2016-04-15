@@ -28,7 +28,7 @@
 <div id="headerDiv">
     <h2>Making Calibration Standards by Internal Standards Method</h2>
 </div>
-<div id="divContainer">
+<div class="container">
     
         <?php
         //Include the 'Make it Now' modal.
