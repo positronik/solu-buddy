@@ -29,8 +29,13 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
 <body>
 
 <!-- Solution Input page -->
+<<<<<<< HEAD
 
 <div id="content" class="text-center">
+=======
+<form action="/accounts/saveSolution.php" method="POST">
+<div id = "content" class="text-center">
+>>>>>>> master
     <img src="serial.png" width="550"><br><br>
     <div class="grey-div">
             <?php
@@ -90,8 +95,21 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
             </div>
         </div>
 </div>
+<<<<<<< HEAD
 
 
+=======
+</form>
+    <?php
+    //Include the 'Make it Now' modal.
+        include '../shared-content/makeItNowModal.php'; 
+    ?> 
+    
+    <?php
+    //Include the Saved solutions modal.
+        include '../shared-content/savedSolutionsModal.php'; 
+    ?> 
+>>>>>>> master
     
 
 </body>
