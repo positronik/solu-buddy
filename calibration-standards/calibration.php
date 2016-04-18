@@ -20,7 +20,6 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
     <script src="../static/js/solutionObjectBuilder.js"></script>
     
 	<link rel="stylesheet" type="text/css" href="../shared-content/InputStyle.css">
-    <link rel="stylesheet" type="text/css" href="calibrationStyle.css">
 </head>
 
 <body>
@@ -30,27 +29,25 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
     //These can be called later with the $_GLOBALS variable
         $EXTERNAL="EXTERNAL" ; $INTERNAL="INTERNAL" ; $ADDITION="ADDITION" ;
     ?>
-    
+
     <div id="content" class="text-center">
         <img src="calibration.png" width="550"><br><br>
-        <div id="inputDiv" class="grey-div">
-            <div id="divContainer">
-                <?php // Dynamically load one of three pages based on the value of '$_GET['value ']' //Make sure a value is passed in if(isset($_GET[ "value"])){ //If it 's the external calibrations page.
-                    if ($_GET["value"] == $GLOBALS['EXTERNAL']) {
-                        include 'content/external.php';
-                    }
+        <div class="grey-div">
+            <?php // Dynamically load one of three pages based on the value of '$_GET['value ']' //Make sure a value is passed in if(isset($_GET[ "value"])){ //If it 's the external calibrations page.
+                if ($_GET["value"] == $GLOBALS['EXTERNAL']) {
+                    include 'content/external.php';
+                }
         
-                    //If its the internal calibrations page
-                    elseif ($_GET["value"] == $GLOBALS['INTERNAL']) {
-                        include 'content/internal.php';
-                    }
+                //If its the internal calibrations page
+                elseif ($_GET["value"] == $GLOBALS['INTERNAL']) {
+                    include 'content/internal.php';
+                }
                     
-                    //If its the standard addition page
-                    elseif ($_GET["value"] == $GLOBALS['ADDITION']) {
-                        include 'content/addition.php';
-                    }    
-                ?>
-            </div>
+                //If its the standard addition page
+                elseif ($_GET["value"] == $GLOBALS['ADDITION']) {
+                    include 'content/addition.php';
+                }    
+            ?>
             <div id="myAlert" class="alert alert-danger" hidden>
                 <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
             </div>

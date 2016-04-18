@@ -22,25 +22,25 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
     <!-- Big decimal javascript used for floating point precision -->
     <script src="big.min.js"></script>
     <script src="serialPage.js"></script>
-	<link rel="stylesheet" type="text/css" href="../single-solution/singleStyle.css">
-    <link rel="stylesheet" type="text/css" href="serialStyle.css">
+
 	<link rel="stylesheet" type="text/css" href="../shared-content/inputStyle.css">
     <title>Solubuddy - Serial Dilution</title>
 </head>
 <body>
+
 <!-- Solution Input page -->
+<<<<<<< HEAD
+
+<div id="content" class="text-center">
+=======
 <form action="/accounts/saveSolution.php" method="POST">
 <div id = "content" class="text-center">
+>>>>>>> master
     <img src="serial.png" width="550"><br><br>
-    <div id="inputDiv" class="grey-div">
-        <div id="headerDiv">
-            <h3>Fill in the fields below to set up the dilution series</h3>
-        </div>
-        <div id="divContainer">
+    <div class="grey-div">
             <?php
                 include "content/serialTable.php";
             ?>
-        </div>
         <div id="myAlert" class="alert alert-danger">
             <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
         </div>
@@ -56,7 +56,7 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
     
         <h2>Serial Dilution</h2>
         <!-- Contains the content of the answer page -->
-        <div id="answerContent" >
+        <div id="answerContent"  class="inline-div" >
             <!-- Stock Solution -->
             <div id="stockSolutionDiv" class="inline-div">
                 <img id="largeBeakerImg" src="../static/images/beakerSpecial.png">
@@ -95,6 +95,10 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
             </div>
         </div>
 </div>
+<<<<<<< HEAD
+
+
+=======
 </form>
     <?php
     //Include the 'Make it Now' modal.
@@ -105,6 +109,7 @@ renderHead( ['title' => 'Logged Landing Page', 'navField1' => 'Account Settings'
     //Include the Saved solutions modal.
         include '../shared-content/savedSolutionsModal.php'; 
     ?> 
+>>>>>>> master
     
 
 </body>

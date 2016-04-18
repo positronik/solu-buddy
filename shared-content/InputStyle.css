@@ -13,14 +13,16 @@ html,body{
 	font-size: 15px;
 }
 
-#inputDiv{
+/*Grey background for input section*/
+.grey-div{
     color:white;
-    background: rgba(40,40,40,0.6);
+    background: rgba(40,40,40,0.8);
     border: 1px solid white;
     border-radius: 10px;
     display: inline-block;
     padding: 20px;
 }
+
 
 /*Place holder text color. Probably only works in Chrome */
 #content ::-webkit-input-placeholder{
@@ -34,6 +36,7 @@ html,body{
     width: 18em;
 }
 
+/*Content id and its classes are applied inside the grey div for textfields, text, and buttons*/
 #content input{
     background: rgba(42,42,42,0.9);
     border: 1px solid white;
@@ -52,6 +55,10 @@ html,body{
 	border-radius:20px;
 }
 
+#content button:hover {
+    background: RGBa(245, 245, 245, 0.4);
+}
+
 #content button.nextButton{
 	background: #92d050;
 	margin-top: 60px;
@@ -60,14 +67,19 @@ html,body{
 	font-size: 20px;
 	border-radius:40px;
 }
+
+/*blue*/
 #content button.makeItNowButton{
 	background: #6495ed;
 }
 
+
+/*yellow*/
 #content button.savedSolButton {
 	background: #ffff94;
 }
 
+/*What the default for most text will look like*/
 #content .regText{
 	position: relative;
 	top: 50%;
@@ -75,11 +87,12 @@ html,body{
 	-ms-transform: translateY(-50%);
 	transform: translateY(-40%);
 	font-size: 18px;
-	margin-top: 2em;
+	margin-top: 3em;
 	padding-bottom:0px;
 	margin-bottom: -2em;
 	
 }
+/*Used for stock solution text in the Internal calibration standard page*/
 #content .stockText{
 	/*Vertically aligns text even if it's double lined*/
 	position: relative;
@@ -92,6 +105,7 @@ html,body{
 	font-size: 20px;
 	font-weight: 600;
 }
+
 
 #content .altStockText{
 	margin-top:60px;
@@ -112,3 +126,160 @@ html,body{
     color: black;
     width: 80%;
 }
+
+#headerDiv {
+    text-align: center;
+}
+
+#headerDiv h2 {
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h3 {
+    text-align: center;
+    font-family: sans-serif;
+    width: 35em;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divCenterer {
+
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+.stuffContainer{
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(42,42,42,.75);
+    border-radius: 10px;
+    alignment: center;
+    border: 1px solid white;
+}
+
+.stepsTexBox{
+    text-align: left;
+    background-color: rgba(42,42,42,.75);
+    color: white;
+    font-size: medium;
+    padding: 20px;
+
+}
+
+.caption {
+    position: relative;
+    bottom: 125px;
+    text-align: center;
+}
+
+
+
+
+/* Answer page style */
+#answerDiv{
+    display: none;
+    margin:15px;
+    color:black;
+    text-align: center;
+    background: rgba(40,40,40,0.6);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.flaskDescription {
+    position: relative;
+    bottom:-35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#arrowContainer{
+    text-align: center;
+}
+
+#arrowContainer img{
+    height: 35px;
+    width: 100px;
+    margin-top: 10px;
+    cursor:pointer;
+}
+
+
+.inline-div{
+	position: relative;
+    display:inline-block;
+    margin: 20px;    
+}
+
+
+#molarity, #molarityValue{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.flaskDescription {
+    position: relative;
+    bottom:-35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.flaskImgAndNumberDiv{
+    height: 217px;   
+}
+
+.flaskImgAndNumberDiv p{
+    margin-top: 0; 
+    position: relative;
+    bottom:2em;
+    font-size: 1.5em;
+}
+
+.blueArrow{
+    position: absolute;
+    right: 0px;
+    top:40%;
+}
+
+.dilutionFlask{
+    position: relative;
+    width:225px;
+}
+
+#answerButtonsDiv {
+    padding-bottom: 40px;
+}
+#answerButtonsDiv button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#myAlert{
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+}
+
+#stockSolutionDiv .blueArrow{
+    right: -50px;
+}
+
+#answerBeaker {
+    height: 323px;
+}
+
+#largeBeakerImg{
+    width: 180px;
+}
+
+#smallBeakerImg{
+    width: 130px;
+}
+
