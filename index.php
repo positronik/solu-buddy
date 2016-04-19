@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/header-styles.css">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/navBar.css">
+    <link rel="stylesheet" type="text/css" href="/shared-content/navbarStyle.css">
+	<link rel="stylesheet" type="text/css" href="/shared-content/accountModalStyle.css">
 
     <!-- jQuery -->
     <script src="/static/js/jquery-1.11.3.min.js"></script>
